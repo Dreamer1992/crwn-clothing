@@ -1,6 +1,9 @@
 import { connect } from 'react-redux';
+
 import { addItem } from '../../redux/cart/cartAction';
+
 import { Button } from '../UI';
+
 import './CollectionItem.styles.scss';
 
 const CollectionItem = ({ item, addItem }) => {

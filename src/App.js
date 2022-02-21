@@ -8,7 +8,9 @@ import HomePage from './pages/HomePage/HomePage';
 import ShopPage from './pages/ShopPage/ShopPage';
 import SignPage from './pages/SignPage/SignPage';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
+
 import { auth, createUserProfileDocument } from './firebase/config';
+
 import { setCurrentUser } from './redux/user/userActions';
 import { selectCurrentUser } from './redux/user/userSelectors';
 

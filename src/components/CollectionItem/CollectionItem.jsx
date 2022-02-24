@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { addItem } from '../../redux/cart/cartAction';
+import { addItem } from '../../redux/cart/cartActions';
 
 import { Button } from '../UI';
 

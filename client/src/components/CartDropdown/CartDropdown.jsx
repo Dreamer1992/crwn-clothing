@@ -1,6 +1,5 @@
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { withRouter } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import { selectCartItems } from '../../redux/cart/cartSelectors';
 import CartItem from '../CartItem/CartItem';
@@ -10,7 +9,12 @@ import { toggleCartHidden } from '../../redux/cart/cartActions';
 
 import './CartDropdown.styles.scss';
 
-const CartDropdown = ({ cartItems, history, dispatch }) => {
+const CartDropdown = () => {
+  const history = useHistory();
+  const dispatch = useDispatch();
+
+  const cartItems = useSelector(selectCartItems);
+
   return (
     <div className="cart-dropdown">
       <div className="cart-items">
@@ -34,8 +38,4 @@ const CartDropdown = ({ cartItems, history, dispatch }) => {
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
-});
-
-export default withRouter(connect(mapStateToProps)(CartDropdown));
+export default CartDropdown;

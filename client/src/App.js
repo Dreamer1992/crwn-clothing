@@ -8,10 +8,10 @@ import ShopPage from './pages/ShopPage/ShopPage';
 import SignPage from './pages/SignPage/SignPage';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
+import GlobalStyle from './globalStyles';
+
 import { selectCurrentUser } from './redux/user/userSelectors';
 import { checkUserSession } from './redux/user/userActions';
-
-import './App.css';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,6 +24,7 @@ const App = () => {
 
   return (
     <div>
+      <GlobalStyle />
       <Header />
 
       <Switch>

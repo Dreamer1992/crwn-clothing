@@ -18,8 +18,15 @@ export const CollectionItemContainer = styled.div`
       display: flex;
     }
   }
+
   @media screen and (max-width: 800px) {
     width: 40vw;
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
     &:hover {
       .image {
         opacity: unset;
@@ -33,7 +40,7 @@ export const CollectionItemContainer = styled.div`
 
 export const AddButton = styled(Button)`
   width: 80%;
-  opasity: 0.7;
+  opacity: 0.7;
   position: absolute;
   top: 255px;
   display: none;

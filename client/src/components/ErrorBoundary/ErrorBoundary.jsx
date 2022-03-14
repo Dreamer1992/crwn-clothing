@@ -17,11 +17,6 @@ class ErrorBoundary extends Component {
     };
   }
 
-  //   static getDerivedStateFromError(error) {
-  //     // process the error
-  //     return { error };
-  //   }
-
   componentDidCatch(error, errorInfo) {
     // Catch errors in any components below and re-render with error message
     this.setState({
@@ -31,7 +26,6 @@ class ErrorBoundary extends Component {
   }
 
   render() {
-    console.log(this.state);
     if (this.state.errorInfo) {
       return (
         <ErrorImageOverlay>
